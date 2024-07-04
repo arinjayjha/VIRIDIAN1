@@ -1,24 +1,15 @@
-/* BigDiv.css */
 .bigImg {
   display: flex;
-  justify-content: center; /* Center horizontally */
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping when the images are too wide */
 }
 
-.bigImage1,
-.bigImage2 {
+.bigImage1 {
   max-width: 50%;
-  flex-basis: 50%; /* Set the initial width to 50% (2 columns) */
-  image-rendering: -webkit-optimize-contrast; /* For Webkit browsers */
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
+  height: auto;
+  margin-right: 20px;
 }
 
-/* Center the bigImage2 element when it's the only element in a row */
-@media (max-width: 50%) {
-  .bigImage2 {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.bigImg h1 {
+  flex: 1;
+  font-size: 24px;
 }

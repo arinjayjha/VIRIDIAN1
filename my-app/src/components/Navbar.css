@@ -1,48 +1,71 @@
-/* Navbar.css */
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
 .navbar {
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 10px 20px;
+}
+
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #337ccf;
-  color: white;
-  padding: 25px 100px;
+  max-width: 1200px; /* Max width for container */
+  margin: 0 auto;
 }
 
 .logo img {
-  max-width: 100px; /* Adjust the width as needed */
+  height: 40px; /* Adjust logo size */
 }
 
 .links {
-  display: flex; /* Make the links container a flex container */
-  align-items: center; /* Align links vertically */
+  display: flex;
+  gap: 15px; /* Space between links */
 }
 
-.links a.nav-button {
-  text-decoration: none;
-  color: white;
+.nav-button {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Dark gray text color */
   font-size: 16px;
-  margin-left: 20px; /* Adjust the spacing between links */
-  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.links a.nav-button:hover {
-  color: #337ccf;
+.nav-button:hover {
+  background-color: #f0f0f0; /* Light gray hover effect */
+   /* Blue text on hover */
 }
 
-/* Media query for responsiveness */
+.nav-button.active {
+   /* Blue background for active link */
+  color: #000000; /* White text for active link */
+}
+
+/* Optional: Responsive adjustments */
 @media (max-width: 768px) {
-  .navbar {
+  .navbar-container {
     flex-direction: column;
-    text-align: center;
-    padding: 20px 0; /* Increase the padding to adjust the height */
+    align-items: flex-start;
   }
 
   .links {
-    margin-top: 20px; /* Adjust the spacing between logo and links */
+    flex-direction: column;
+    width: 100%;
   }
 
-  .links a.nav-button {
-    margin: 10px 0;
-    margin-left: 0; /* Reset the left margin for mobile view */
+  .nav-button {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
   }
 }

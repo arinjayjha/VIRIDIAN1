@@ -2,6 +2,7 @@
   "dependencies": {
     "chart": "^0.1.2",
     "chart.js": "^4.4.0",
+    "lottie-react": "^2.4.0",
     "react-chartjs-2": "^5.2.0",
     "react-hook-form": "^7.46.2",
     "riot": "^9.0.4"
